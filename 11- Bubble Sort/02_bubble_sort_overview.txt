@@ -1,0 +1,34 @@
+                        BUBBLE SORT
+
+    
+    1) It's a sorting algorithm where the LARGEST VALUES
+    bubble up to the top!
+
+    2) Before we sort, we must SWAP!
+        - Many sorting algorithms involve some swapping functionality (e.g. swapping
+        numbers to put them in order) 
+    
+    ES5:
+    function swap(arr, idx1, idx2){
+        let temp = arr[idx1];
+        arr[idx1] = ar[idx2];
+        arr[idx2] = temp;
+    }
+
+    ES2015:
+    const swap = (arr, idx1, idx2) => {
+        [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+    }
+
+    3) Bubble Sort PSEUDOCODE:
+        - Start looping from with a variable called "i" 
+        at the END of the array towards the BEGINNING;
+        - Start an inner loop with a variable called j from the BEGINNING
+        until -1;
+        - If arr[j] is GREATER than arr[j+1], SWAP those two values!;
+        - Return the sorted array;
+
+    4) BIG O Complexity:
+        - In general, is O(n²)
+        - If it's halfway sorted, it's linear time O(n)
+        - Bubble sort is not the best algorithm, but it's a good starting point for learning!

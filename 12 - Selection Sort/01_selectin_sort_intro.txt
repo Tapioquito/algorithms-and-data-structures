@@ -1,0 +1,22 @@
+
+
+                SELECTION SORT
+
+- It's similar do bubble sort, but instead of first placing the large values into sorted postion,
+ it places small values into sorted position one at a time
+
+                PSEUDO CODE
+
+- Store the FIRST element as the SMALLEST value you've seen so far;
+- COMPARE this item to the next item in the array until you find a SMALLER number;
+- Then UPDATE the variable with the new minimum;
+- Do NOT save the value itself, but the INDEX of where that value is found
+- Continue until the end of the array
+- If the "minimum" is not the value (index) you initially began with, SAWP the two values
+- Repeat this proccess with the next element until the array is sorted.
+
+                "BIG O" NOTATION
+
+- Time complexity of O(n²)
+- Generally bubble sort is better
+- That said, were we worried about writing on memory, selection sort would be better

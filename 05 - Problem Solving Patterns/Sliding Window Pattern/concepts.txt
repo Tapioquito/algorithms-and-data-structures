@@ -1,0 +1,9 @@
+Sliding Window Patterns involves creating a WINDOW wich can either be an array or number from one position to another;
+
+Depending on a certain condition, the window either INCREASES or CLOSES  (and a NEW window is created);
+
+Very useful for KEEPING TRACK of a subset of data in an array/string/etc.
+
+Write a function called maxSubArraySum which accepts an array of integers AND a number called "n";
+
+The function should calculate the maximum sum of "n" consecutive elements in the array;

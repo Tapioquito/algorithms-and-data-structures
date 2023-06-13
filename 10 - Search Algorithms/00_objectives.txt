@@ -1,0 +1,7 @@
+            OBJECTIVES
+
+1) Describe what a search algorithm is;
+2) Implement LINEAR search on arrays;
+3) Implement BINARY search on sorted arrays;
+4) Implement a NAIVE string searching algorithm;
+5) Implement the KMP string searching algorithm; 
