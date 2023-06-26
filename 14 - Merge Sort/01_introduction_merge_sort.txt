@@ -1,0 +1,38 @@
+
+
+                        MERGE SORT
+
+    - This is a intermediate tier sorting algorithm
+    - They are much faster, but less intuitive to understand!
+
+        OBJECTIVES:
+    - Understand the LIMITATIONS of the sorting algorithms we have learned so far;
+    - Implement Merge, Quick and Radix sort.
+
+        Why Learn This?
+     - The sorting algorithms we have learned so far don't scale well
+     - Try out bubble sort on an array of 100.000 elements. It will take quite some time!
+
+        FASTER SORTS
+    - There is a family of sorting algorithms that can improve time complexity from O(n²) to O( n logn)
+    - There is a tradeoff between efficiency and simplicity
+    - The more efficient algorithms are much less simple and generally takes longer to understand!
+
+        What exactly is  Merge Sort?
+    - Created by Von Neuman in 1948, it's a combination of three things: spliting up, merging and sorting!
+    - It exploits the fact that arrays of 0 or 1 element ARE ALWAYS SORTED
+    - It works by decomposing and array into smaller arrays of 0 or 1 elements, then building up a newly sorted array
+    
+        Example:
+        1) [8, 3, 5, 4, 7, 6, 1, 2] -> Let's split them!
+        2) [8, 3, 5, 4]     [7, 6, 1, 2] -> Let's split them (again)!
+        3) [8, 3]   [5, 4]  [7, 6]  [1, 2]  -> Let's split them (AGAIN!!!)
+        4) [8]      [3]     [5]     [4]     [7]     [6]     [1]     [2] -> Now we MERGE them together while SORTING
+        5) [3, 8]   [4, 5]  [6,7]   [1, 2] -> repeat the process
+        6) [3, 4, 5, 8]     [1, 2, 6, 7] -> repeat again!
+        7) [1, 2, 3, 4, 5, 6, 7, 8]
+
+    
+    BIG O of Merge Sort
+    - in all case scenarios (best, average, worst) we have a TIME complexity of O(n log n)
+    - The SPACE complexity is of O(n)
