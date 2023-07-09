@@ -1,0 +1,9 @@
+
+
+
+            QUICK SORT PSEUDO PSEUDOCODE
+
+    - Call the pivot helper on the array;
+    - When the helper returns to you the update pivot index, 
+    RECURSIVELLY call the pivot helper on the subarray to the LEFT of that index, and the subrray to the right of that index;
+    - Your base case occurs when you consider a subarray with LESS than 2 elements;

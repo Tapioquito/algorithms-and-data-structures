@@ -1,0 +1,118 @@
+
+
+                SINGLY LINKED LISTS
+
+    OBJECTIVES
+        - Define what Singly Linked List is;
+        - Compare and contrast linked lists with arrays;
+        - Implement ISNERTION, REMOVAL, and TRAVERSAL methods on SLLs.
+    
+    WHAT IS A LINKED LIST?
+        - It's a data structure wich stores any kind of data you want;
+        - Strings, Numbers, etc.
+        - It contains a HEAD, TAIL and LENGTH properties;
+        - Linked lists consists of nodes  and each node has
+        a VALUE and a POINTER to another node or null;
+
+    COMPASION WITH ARRAYS:
+
+            LISTS:
+        - Do NOT have indexes!
+        - Connected via nodes with a "NEXT" pointer;
+        - RANDOM access is NOT allowed;
+
+            ARRAYS:
+        - Indexed in order!
+        - Insertion an deletion can be * expensive *;
+        - Can quickly be accessed at a specific index;
+    
+    - The main reason you'll want to use a linked list is if you care about insertion and deletion;
+
+
+    PUSHING METHOD PSEUDOCODE:
+    - This function should accept a value 
+    - Create a new node using the value passed to the function
+    - IF there is no head property on the list, set the head and tail to be the newly created node;
+    - Otherwise set the next property on the tail to be the new node and set the tail property on the list
+    to be the newly created node;
+    - Increment the length by one.
+
+
+    POP METHOD PSEUDOCODE:
+    - If there are no nodes in the list, return UNDEFINED;
+    - Otherwise, loop through the entire list until you reach the TAIL;
+        -> SET the next property of the 2nd to last node to be NULL;
+    - SET the tail to be the 2nd to last node;
+    - DECREMENT the length of the list by 1;
+
+    SHIFT PSEDUOCODE:
+    - If there are NO nodes, return UNDEFINED;
+    - Store the current head property in a variable
+    - Set the head property to be the current head's next property;
+    - Decrement the length by 1;
+    - Return the value of the node removed;
+
+    UNSHIFT PSEUDOCODE:
+    - This function should accept a VALUE;
+    - Create a new node using the vlaue passed to the function;
+    - If there is NO head property on the list, set the head and tail to bem the newly created node;
+    - Otherwise set the newly created node's next property to be the current head property on the list
+    -  Set the head property on the list to be that newly created node;
+    - Increment the length of the list by 1
+    - Return the linked list
+
+    GET PSEUDOCODE:
+    - Retriveing a node by it's position on the linked list;
+    - This function should accept an index;
+    - If the index is less than zero OR greater than OR equal to the length of the list,
+    return NULL;
+    - Loop through the list until you reach the index and return the node
+    at that specific index;
+
+    SET PSEUDOCODE
+    - Changing the value of a node based on it's position on the linked list.
+    - This function should accept a value and an index;
+    - Use your GET function to find the specific node;
+    - if the node is not found, return FALSE;
+    - If the node is found, set the value of that node to be 
+    the value passed to the function and return true;
+
+    INSERT PSEUDOCODE
+    - Add a node to the Linked List at a SPECIFIC position;
+    - If index is less than zero or greater than the length, return FALSE;
+    - If the index is 0, PUSH a new node to the START of the list!
+    - Otherwise, using the GET method, access the node at index -1;
+    - Set the NEXT property on that node to be the NEW node;
+    - Increment the length
+    - return true
+
+    REMOVE PSEUDOCODE:
+    - Removing a node from the list at a specific position;
+    - If the index is less than zero OR greater than the length, return UNDEFINED;
+    - If the index is THE SAME as the length -1, pop!
+    - If the index is zero, shift!
+    - Otherwise, using the GET method, access the node at index -1
+    - SET the  next property on that node  to be de NEXT of the next node;
+    - DECREMENT the length;
+    - Return the value of the node removed;
+
+    REVERSE PSEUDOCODE:
+    - It's about REVERSING the Linked List IN PLACE 
+    (without creating copies)!
+    - SWAP the HEAD and TAIL;
+    - Create a VARIABLE called NEXT;
+    - Create a VARIABLE called PREVIOUS;
+    - Create a VARIABLE called CURRENT/NODE and intialize it 
+    to the HEAD property;
+    - Loop through the list;
+    - SET NEXT to be the next property on whatever node is;
+    - SET the next property on the node to be whatever prev is;
+    - SET PREV to be the value of node avaliable;
+    - SET the NODE variable to be the value of the next variable;
+
+    BIG O NOTATION
+    -  Insertion O(1);
+    - Removal O(1) or O(n);
+    - Searching O(n);
+    - Access O(n);
+

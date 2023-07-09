@@ -1,0 +1,21 @@
+
+
+                        DATA STRUCTURES
+
+        WHAT DO THEY DO?
+    - Data structures are collection of values, the relationships among them,
+    and the functions or operations that can be applied to the data;
+
+        WHY SO MANY?
+    - Different data structures excel at different things.
+    - Some are highly specialized  while others (like arrays) are more generally used;
+    
+        WHY CARE?
+    - The more time you spend as a developer, the more likely you'll need to use one of these data structures;
+    - You've already worked with many of the unkowingly!
+    - They are essential for INTERVIEWS!
+
+
+    THERE IS NO 'BEST' DATA STRUCTURE!
+    Every data structure has it's advantages in different sittuations
+    
