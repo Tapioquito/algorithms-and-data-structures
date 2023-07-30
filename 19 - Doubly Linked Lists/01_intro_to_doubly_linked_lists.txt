@@ -1,0 +1,108 @@
+
+               BIG O of Doubly Linked Lists
+
+                Insertion: O(1)
+                Removal: O(1)
+                Searching: O(n)
+                Access*: O(n)
+                
+                * Technically Searching is O(n/2), 
+                but that's just O(n) anyways.
+               
+               - Doubly Linked Lists are ALMOST identical to Sngly Liked Lists,
+               except the is an aditional pointer to previous nodes;
+               - With the aditional pointer your job gets a bit easier;
+               -  DLL are better at searching beacause you can do it in HALF the time;
+               - HOWEVER, they do take up more memory, considering the extra pointer;
+               - 
+               
+               
+                OBJECTIVES
+
+    - Construct a Doubly Linked List;
+    - Compare and Contrast Doubly & Singly Linked Lists;
+    - Implement Basic Operations on DLLs;
+
+                STRUCTURE:
+    - ALMOST identical to SLLs, except every node has ANOTHER
+    pointer, this time for the PREVIOUS node!
+
+                PUSH PSEDUOCODE
+    - Create a new node with the value passed to the function;
+    - If the head property is null, set the head and tail to bem the newly created node;
+    - If not, set the next property on that tail to be that node
+    - Set the PREVIOUS property on the newly created node to be the tail;
+    - Set the tail to be the newly created node;
+    -Increment the length;
+    - Return the list;
+
+                POP PSEDUOCODE
+    
+    - If there is no head or tail, return UNDEFINED;
+    - Store the current tail in a variable to return later;
+    - IF the length is 1, set the head and tail to be NULL;
+    - Update the tail to be the previous node;
+    - Set the newTail's next to NULL;
+    - DECREMENT the length of the list;
+    - RETURN the value removed;
+
+                SHIFT PSEDUOCODE
+    - If length is 0, return UNDEFINED
+        * It's basically the same as POP. You only have to adapt it!
+
+                UNSHIFT PSEDUOCODE
+    - Create a NEW NODE with the value passed to the function;
+    - If the list is empty:
+                - Set the head to be the newNode;
+                - Set the tail to be the newNode;
+    - OTHERWISE:
+                - Set the PREVIOUS property on the head of the list to be the newNode;
+                - Set hte NEXT property on the newNode to be the head property;
+                - UPDATE the head to be the newNode;
+    - Increment the length;
+    - Return the LIST 
+
+                GET PSEDUOCODE
+
+    - If the index is less than 0 or GREATER  or EQUAL
+    to the length, return NULL;
+    - If the index is less than or equal to HALF  the length of the list:
+                        - Loop through the list starting from the HEAD
+                        and loop towards the middle;
+                        - Return the node once it is found;
+    - If the index is GREATER than the half lenght of the list:
+                        - Loop trhough the list starting from the tail 
+                        and loop towards the middle;
+                        - Return the node once it is found;
+    
+
+            SET PSEDUOCODE
+    - Create a variable wich is the result of the 
+        GET method at the index passed to the function
+        - If the GET method returns a valid node, set the value of that node 
+        to be the value passed to the function
+        - Return TRUE
+    - Otherwise return FALSE
+
+            INSERT PSEDUOCODE
+    - If the index is less than zero or greater than or equal to the length,
+    return FALSE;
+    - If the index is 0, UNSHIFT;
+    - If the index is the same as the length, PUSH;
+    - Use the GET method to accesss the INDEX-1;
+    - Set the next and previous properties on the correct nodes 
+    to link everything together
+    - Increment the length by 1;
+    - return TRUE;
+
+            REMOVE PSEDUOCODE
+     - If the index is less than zero or greater than or equal to the length,
+    return UNDEFINED;
+     If the index is 0, SHIFT;
+    - If the index is the same as the length, POP;
+    - Use the GET method to retireve the item to be removed;
+    - Update the next and prev properties to 
+    REMOVE the found node from the list;
+    - Set the next and prev to NULL on the found node;
+    - Decrement the length;
+    - returnt he removed node;
