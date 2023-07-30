@@ -1,0 +1,56 @@
+
+
+
+                STACKS:
+
+- Stacks are a collection of data that abide to a LIFO* principle.
+        *LIFO: Last In First Out;
+
+- The last element added to the stack will be 
+the first element to be removed from it;
+
+- How is it used: think about a stack of plates about to be washed.
+- As you pile up, the last thing(on the top) will be the first thing to be removed.
+
+- Where Stacks are used:
+    - Managing function invocations;
+    - Undo / Redo functionalitties;
+    - Routing (the history object) is treated like a stack!
+
+- They are NOT a built-in structure in JS, but are relativelly simple to implement;
+
+
+        BIG O of Stacks
+
+- Insertion: O(1)
+- Removal: O(1)
+- Searching: O(n)
+- Access: O(n)
+
+
+
+
+
+========================================================================================================
+        PUSH PSEUDOCODE
+
+- This function should accept a value;
+- Create a new node with that value;
+- If there are no nodes in the stack, set the first and last property 
+to be the newly created node;
+-  If there is at leat one node, create a variable that stores the current first property on the stack;
+- RESET the property to be the newly created node;
+- Set the next property on the node to be the previously created variable;
+- Increment the size of the stack by 1;
+
+
+
+    POP PSEUDOCODE
+- If there are no  nodes in the stack, return null;
+- Create a temporary variable to store the 
+FIRST property on the stack;
+- If the is only 1 node, set the first and last properties to be NULL;
+- If there is more than one node, set the first property to be
+the next property on the current first;
+- Decrement the size by 1
+- Return the value of the removed node;
